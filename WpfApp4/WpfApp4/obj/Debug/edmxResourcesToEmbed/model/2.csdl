@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LIBRARYModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ABOUT_BOOK">
+    <Key>
+      <PropertyRef Name="NAME_OF_BOOK" />
+    </Key>
+    <Property Name="BOOK_AUTHOR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NAME_OF_BOOK" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YEAR_OF_PUBLICATION" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PRICE" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="NUMBER_OF_COPIES" Type="Int32" Nullable="false" />
+    <Property Name="SHORT_ANNOTATION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ABOUT_READER">
+    <Key>
+      <PropertyRef Name="LIBRARY_CARD_ID" />
+    </Key>
+    <Property Name="LIBRARY_CARD_ID" Type="Int32" Nullable="false" />
+    <Property Name="FULL_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DATE_OF_ISSUE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DATE_OF_PASS" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TIME_OF_LEAVE" Type="Time" Precision="7" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="LIBRARYEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ABOUT_BOOK" EntityType="Self.ABOUT_BOOK" />
+    <EntitySet Name="ABOUT_READER" EntityType="Self.ABOUT_READER" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+  </EntityContainer>
+</Schema>

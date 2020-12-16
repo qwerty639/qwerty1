@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище LIBRARYModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ABOUT_BOOK">
+    <Key>
+      <PropertyRef Name="NAME_OF_BOOK" />
+    </Key>
+    <Property Name="BOOK_AUTHOR" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NAME_OF_BOOK" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="YEAR_OF_PUBLICATION" Type="date" Nullable="false" />
+    <Property Name="PRICE" Type="money" Nullable="false" />
+    <Property Name="NUMBER_OF_COPIES" Type="int" Nullable="false" />
+    <Property Name="SHORT_ANNOTATION" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ABOUT_READER">
+    <Key>
+      <PropertyRef Name="LIBRARY_CARD_ID" />
+    </Key>
+    <Property Name="LIBRARY_CARD_ID" Type="int" Nullable="false" />
+    <Property Name="FULL_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ADDRESS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATE_OF_ISSUE" Type="date" Nullable="false" />
+    <Property Name="DATE_OF_PASS" Type="date" Nullable="false" />
+    <Property Name="TIME_OF_LEAVE" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityContainer Name="Хранилище LIBRARYModelContainer">
+    <EntitySet Name="ABOUT_BOOK" EntityType="Self.ABOUT_BOOK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ABOUT_READER" EntityType="Self.ABOUT_READER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

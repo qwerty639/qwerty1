@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <RadioButton GroupName="phones" Content="Iphone 6s">
+                <RadioButton.ToolTip>
+                    <ToolTip Background ="Green" Foreground ="black" HasDropShadow="False">
+                        <StackPanel>
+                            <TextBlock Text="Цена:"/>
+                            <TextBlock Text="Связной: 54990 рублей"/>
+                            <TextBlock Text="Ситилинк: 53990 рублей"/>
+                        </StackPanel>
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <RadioButton GroupName="phones" Content="Nexus 5x">
+                <RadioButton.ToolTip>
+                    <ToolTip Background="Green" Foreground="Black" >
+                        <StackPanel>
+                            <TextBlock Text="Цена:"/>
+                            <TextBlock Text="Связной: 29990 рублей"/>
+                            <TextBlock Text="Ситилинк:28990 рублей"/>
+                        </StackPanel>
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <RadioButton GroupName="phones" Content="Lumia 950">
+                <RadioButton.ToolTip>
+                    <ToolTip Background="Green" Foreground="Black">
+                        <StackPanel>
+                            <TextBlock Text="Цена:"/>
+                            <TextBlock Text="Связной: 39990 рублей"/>
+                            <TextBlock Text="Ситилинк: 40990 рублей"/>
+                        </StackPanel>
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

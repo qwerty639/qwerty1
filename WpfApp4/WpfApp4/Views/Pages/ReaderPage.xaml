@@ -1,0 +1,108 @@
+﻿<Page x:Class="WpfApp4.Views.Pages.ReaderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp4.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="700"
+      Title="ReaderPage">
+
+    <Grid Background="#FFF8DC">
+        <StackPanel>
+
+            <TextBlock Text="Данные читателя:" 
+                       Width="210" Height="33"
+                       FontSize="25"
+                       Margin="0 10 0 100"/>
+
+            <StackPanel Orientation="Horizontal" 
+                        
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                <StackPanel Height="300"
+                            HorizontalAlignment="Left"
+                            Width="300">
+
+                    <TextBlock Text="Номер чит. билета:"
+                               Margin="15 10 10 10"
+                               FontSize="20"
+                               FontWeight="Black"/>
+
+                    <TextBox x:Name="TxbCardID"
+                             Margin="15 0 15 10"
+                             Height="30"/>
+
+                    <TextBlock Text="ФИО:"
+                               Margin="15 10 10 10"
+                               FontSize="20"
+                               FontWeight="Black"/>
+
+                    <TextBox x:Name="TxbFullName"
+                             Margin="15 0 15 10" 
+                             Height="30"/>
+
+                    <TextBlock Text="Адрес:"
+                               Margin="15 10 10 10"
+                               FontSize="20"
+                               FontWeight="Black"/>
+
+                    <TextBox x:Name="TxbAddress"
+                             Margin="15 0 15 10"
+                             Height="30"/>
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Right"
+                             
+                            Margin="0 0 0 0">
+
+                    <TextBlock Text="Дата выдачи книги:"
+                               Margin="15 10 10 10"
+                               FontSize="20"
+                               FontWeight="Black"/>
+
+                    <TextBox x:Name="TxbIssueDate"
+                             Margin="15 0 15 10"
+                             Height="30"/>
+
+                    <TextBlock Text="Дата сдачи книги:"
+                               Margin="15 10 10 10"
+                               FontSize="20"
+                               FontWeight="Black"/>
+
+                    <TextBox x:Name="TxbPassDate"
+                             Margin="15 0 15 10"
+                             Height="30"/>
+
+                    <TextBlock Text="Отметка о прибытии:"
+                               Margin="15 10 10 10"
+                               FontSize="20"
+                               FontWeight="Black"/>
+
+                    <TextBox x:Name="TxbLeaveTime"
+                             Margin="15 0 15 10"
+                             Height="30"/>
+
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <Button x:Name="btnNext"
+                    Content="Далее"
+                    Width="150" 
+                    Height="50"
+                    FontSize="20"
+                    Margin="0 0 15 0"
+                    HorizontalAlignment="Right" Click="btnNext_Click"/>
+                <Button x:Name="btn1Back"
+                    Content="Назад"
+                    Width="150"
+                    Height="50"
+                    FontSize="20"
+                    HorizontalAlignment="Left"
+                    Margin="15 -50 0 0"
+                    Click="btnBack_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
